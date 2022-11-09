@@ -4,7 +4,7 @@ import {routerComments} from './routes/commentsRoutes.js'
 import cors from 'cors'
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.POR || 3000;
 
 app.use(cors({origin: '*'}))
 app.use('/api/tasks', routerTasks)
